@@ -1,4 +1,3 @@
-
 %module bolt
 %{
 #define SWIG_FILE_WITH_INIT
@@ -7,6 +6,7 @@
 #include "../../cpp/src/include/public.hpp"
 %}
 
+%include <std/std_vector.i>
 %include <config.i>
 
 // ================================================================

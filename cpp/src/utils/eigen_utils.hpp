@@ -14,7 +14,7 @@
     #include "src/external/eigen/Eigen/Dense"
    #include "src/external/eigen/unsupported/Eigen/CXX11/Tensor"
 #else
-    #include "Dense"
+    #include "Eigen/Dense"
     #include "unsupported/Eigen/CXX11/Tensor"
 //    #include "unsupported/Eigen/CXX11/Tensor"
 #endif

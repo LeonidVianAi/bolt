@@ -15,6 +15,7 @@ from setuptools import find_packages
 from setuptools import setup
 from setuptools import Extension
 
+import pkgconfig
 
 # ================================ C++ extension
 
@@ -30,10 +31,13 @@ try:
 except AttributeError:
     numpy_include = numpy.get_numpy_include()
 
+
+eigen_include = pkgconfig.cflags('eigen3')
+eigen_include = eigen_include[2:]
 # gather up all the source files
 # srcFiles = [join(PROJ_DIR, 'python', 'bolt', 'native.i')]
 srcFiles = [join('python', 'bolt', 'native.i')]
-includeDirs = [numpy_include]
+includeDirs = [numpy_include,eigen_include]
 paths = [CPP_SRC_PATH]
 for path in paths:
     srcDir = path

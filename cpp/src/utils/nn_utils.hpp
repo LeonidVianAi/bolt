@@ -16,7 +16,7 @@
     #include "src/external/eigen/Eigen/Dense"
     #include "src/include/public.hpp"  // for Neighbor
 #else
-    #include "Dense"
+    #include "Eigen/Dense"
     #include "public.hpp"
 #endif
 

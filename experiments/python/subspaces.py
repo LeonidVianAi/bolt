@@ -5,7 +5,7 @@ from __future__ import division
 import numpy as np
 import numba
 
-from .utils import top_k_idxs
+from utils import top_k_idxs
 
 
 # ================================================================ eigenvecs

@@ -13,8 +13,8 @@ import sys  # just for stderr for warnings
 
 from PIL import Image
 
-from python import files
-from python import image_utils
+import files
+import image_utils
 
 
 from joblib import Memory

@@ -9,7 +9,7 @@ import PIL
 from PIL import Image
 from PIL import ImageOps  # can't just do PIL.ImageOps for some reason
 
-from . import files
+import files
 
 
 # ================================ TODO rm duplicate code from imagenet.py

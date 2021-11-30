@@ -10,7 +10,7 @@ import seaborn as sb
 from . import product_quantize as pq
 from . import subspaces as subs
 from . import clusterize
-from .utils import kmeans
+from utils import kmeans
 
 
 # ================================================================ misc funcs

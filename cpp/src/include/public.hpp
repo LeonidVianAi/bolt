@@ -16,7 +16,7 @@
     #include "src/external/eigen/Eigen/Core"
     #include "src/utils/eigen_utils.hpp"
 #else
-    #include "Core"
+    #include "Eigen/Core"
     #include "eigen_utils.hpp"
 #endif
 

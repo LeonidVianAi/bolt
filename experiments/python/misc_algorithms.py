@@ -7,7 +7,7 @@ import torch
 import torch.nn.functional as F
 import torch.optim as optim
 
-from .utils import kmeans
+from utils import kmeans
 
 from joblib import Memory
 _memory = Memory('.', verbose=0)
