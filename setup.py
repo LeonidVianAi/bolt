@@ -91,14 +91,13 @@ modules = [splitext(basename(path))[0] for path in glob(glob_str)]
 # ================================ Call to setup()
 
 setup(
-    name='pybolt',
-    version='0.1.4',
+    name='vianbolt',
+    version='0.0.1',
     license='MPL',
     description='Fast approximate matrix and vector operations',
-    author='Davis Blalock',
-    author_email='dblalock@mit.edu',
-    url='https://github.com/dblalock/bolt',
-    download_url='https://github.com/dblalock/bolt/archive/0.1.tar.gz',
+    author='Leonid Bobovich',
+    author_email='leonid@vian.ai',
+    url='https://github.com/LeonidVianAi/bolt.git',
     packages=['bolt'],
     package_dir={'bolt': 'python/bolt'},
     py_modules=modules,
