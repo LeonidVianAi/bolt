@@ -744,8 +744,8 @@ void mithral_learn_lut_offsets_scales(
     auto nrows_round = nrow_blocks * RowTileSz;
 
     const float* in_ptrs[RowTileSz];
-    const float* offset_ptrs[RowTileSz];
-    uint8_t* out_ptrs[RowTileSz];
+    //const float* offset_ptrs[RowTileSz];
+    //uint8_t* out_ptrs[RowTileSz];
 
     __m256 mins[ncodebooks];
     __m256 maxs[ncodebooks];
@@ -833,7 +833,7 @@ void quantize_luts(const float* luts_f32, int nrows,
     static constexpr int lut_sz = 16;
     static constexpr int codebook_group_sz = 2; // 4 f32 luts -> 1 epu8 lut
     static constexpr int packet_width = 8; // objs per simd register
-    static constexpr int nstripes = lut_sz / packet_width;
+    //static constexpr int nstripes = lut_sz / packet_width;
     static constexpr int ncodebook_groups = ncodebooks / codebook_group_sz;
     static_assert(ncodebooks % codebook_group_sz == 0,
         "Number of codebooks must be a multiple of 2");

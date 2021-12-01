@@ -198,8 +198,8 @@ void mithral_encode(const int8_t* X, int64_t nrows, int ncols,
     assert(nrows % block_nrows == 0); // TODO remove this constraint
 
     size_t x_col_stride = nrows;
-    size_t out_col_stride = nrows;
-    size_t splitval_luts_stride = vals_per_split;
+    //size_t out_col_stride = nrows;
+    //size_t splitval_luts_stride = vals_per_split;
     const int8_t* x_ptrs[nsplits_per_codebook];
     __m256i current_vsplitval_luts[nsplits_per_codebook];
 

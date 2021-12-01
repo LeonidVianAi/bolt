@@ -32,7 +32,7 @@ namespace std {
 
 		// copy data from vect into numpy array
 		DTYPE* out_data = (DTYPE*) array_data(out_array);
-		for (size_t i = 0; i < sz; i++) {
+		for (npy_intp i = 0; i < sz; i++) {
 			//out_data[i] = static_cast<DTYPE>($1[i]);
 			out_data[i] = static_cast<DTYPE>($1.data()[i]);
 			// printf("%.3g -> %.3g\n", (double)$1[i], (double)out_data[i] );

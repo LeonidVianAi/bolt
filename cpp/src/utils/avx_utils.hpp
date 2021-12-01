@@ -478,7 +478,7 @@ void _bgemm(const uint64_t* A, const uint64_t* B,
     // int B_col_stride=-1, int out_col_stride=-1, int nrows_per_chunk=1000*1000)
 {
     using dtype = uint64_t;
-    using packet_t = uint64_t;
+    //using packet_t = uint64_t;
     static const int packet_sz = 1; // 1 uint8 is what popcnt operates on
     D = StaticD > 0 ? StaticD : D; // allow specifying D at compile time
     if (MIN(N, MIN(D, M)) < 1) { return; } // nothing to do

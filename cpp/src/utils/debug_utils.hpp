@@ -110,7 +110,7 @@ inline void dumpBigEndianBits(T x, bool newline=true) {
 // template<class T, class _=typename std::enable_if< !std::is_pointer<T>::value >::type>
 inline void dump_bits(const void* x, size_t size, bool newline=true) {
 	const uint8_t* ptr = reinterpret_cast<const uint8_t*>(x);
-	for (int i = 0; i < size; i++) {
+	for (size_t i = 0; i < size; i++) {
 		std::cout << " ";
 		for (int j = 0; j < 8; j++) {
 			uint64_t mask = ((uint8_t)1) << j;

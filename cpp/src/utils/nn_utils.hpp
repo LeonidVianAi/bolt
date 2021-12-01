@@ -172,15 +172,15 @@ inline vector<Neighbor> knn_from_dists(const T* dists, size_t len, size_t k,
     assert(len > 0);
     k = std::min(k, len);
     vector<Neighbor> ret(k); // warning: populates it with k 0s
-    for (idx_t i = 0; i < k; i++) {
-		ret[i] = Neighbor{i, dists[i]};
+    for (size_t i = 0; i < k; i++) {
+		ret[i] = Neighbor{idx_t(i), dists[i]};
     }
     if (smaller_better) {
         sort_neighbors_ascending_distance(ret);
     } else {
         sort_neighbors_descending_distance(ret);
     }
-    for (idx_t i = k; i < len; i++) {
+    for (size_t i = k; i < len; i++) {
         maybe_insert_neighbor(ret, dists[i], i, smaller_better);
     }
     return ret;
@@ -189,7 +189,7 @@ inline vector<Neighbor> knn_from_dists(const T* dists, size_t len, size_t k,
 template<class T, class R>
 inline vector<Neighbor> neighbors_in_radius(const T* dists, size_t len, R radius_sq) {
     vector<Neighbor> neighbors;
-    for (idx_t i = 0; i < len; i++) {
+    for (size_t i = 0; i < len; i++) {
         auto dist = dists[i];
         if (dists[i] < radius_sq) {
 			neighbors.emplace_back(i, dist);
