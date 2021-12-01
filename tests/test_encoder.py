@@ -284,7 +284,7 @@ def test_basic():
             true_dists[:, i], k_true, smaller_better=False)
     bolt_knn = [enc.knn(q, k_bolt) for q in Q]
 
-    contained = np.empty((len(Q), k_bolt), dtype=np.bool)
+    contained = np.empty((len(Q), k_bolt), dtype=bool)
     for i in range(len(Q)):
         true_neighbors = true_knn[i]
         # bolt_dists = enc.transform(Q[i])
