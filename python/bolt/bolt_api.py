@@ -209,7 +209,7 @@ def _learn_quantization_params(X, centroids, elemwise_dist_func, Q=None,
     """learn distros of entries in each lut"""
 
     if Q is None:
-        num_rows = min(10*1000, len(X) / 2)
+        num_rows = min(10*1000, len(X) // 2)
         how_many = min(1000, num_rows // 2)
         _, Q = _extract_random_rows(
             X[num_rows:], how_many=how_many, remove_from_X=False)
