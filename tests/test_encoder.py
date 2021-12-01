@@ -212,7 +212,7 @@ def test_basic():
 
     l2_corrs = np.empty(len(Q))
     for i, q in enumerate(Q):
-        l2_true = _dists_sq(X, q).astype(np.int)
+        l2_true = _dists_sq(X, q).astype(int)
         l2_bolt = enc.transform(q)
         l2_corrs[i] = _corr(l2_true, l2_bolt)
         if i == nqueries - 1:
@@ -253,7 +253,7 @@ def test_basic():
     true_knn = _knn(X, Q, k_true)
     bolt_knn = [enc.knn(q, k_bolt) for q in Q]
 
-    contained = np.empty((nqueries, k_bolt), dtype=np.bool)
+    contained = np.empty((nqueries, k_bolt), dtype=bool)
     for i in range(nqueries):
         true_neighbors = true_knn[i]
         bolt_neighbors = bolt_knn[i]
