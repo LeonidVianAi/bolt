@@ -105,7 +105,7 @@ def kmeans(X, k, max_iter=16, init='kmc2'):
     else:
         raise ValueError("init parameter must be one of {'kmc2', 'subspaces'}")
 
-    estimator = cluster.MiniBatchKMeans(k, init=seeds, max_iter=max_iter).fit(X)
+    estimator = cluster.MiniBatchKMeans(k, init=seeds, max_iter=max_iter, n_init=1).fit(X)
     return estimator.cluster_centers_, estimator.labels_
 
 
