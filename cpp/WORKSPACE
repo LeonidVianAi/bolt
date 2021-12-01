@@ -1,0 +1,11 @@
+new_local_repository(
+    name = "usrlocal",
+    path = "/usr/local/include",
+    build_file_content = """
+package(default_visibility = ["//visibility:public"])
+cc_library(
+    name = "headers",
+    hdrs = glob(["**/*"])
+)
+"""
+)

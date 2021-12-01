@@ -73,7 +73,7 @@ extra_args = ['-std=c++14',
 
 
 # inplace extension module
-includeDirs += [join(PROJ_DIR, 'python', 'bolt')]  # for swig
+includeDirs += [join(PROJ_DIR, 'cpp'), join(PROJ_DIR, 'python', 'bolt')]  # for swig
 nativeExt = Extension("_bolt",  # must match cpp header name with leading _
                       srcFiles,
                       define_macros=[('NDEBUG', '1')],

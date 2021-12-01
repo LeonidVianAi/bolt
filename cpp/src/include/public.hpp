@@ -12,13 +12,8 @@
 #include <memory>
 #include <vector>
 
-#ifdef BLAZE
-    #include "src/external/eigen/Eigen/Core"
-    #include "src/utils/eigen_utils.hpp"
-#else
-    #include "Eigen/Core"
-    #include "eigen_utils.hpp"
-#endif
+#include <Eigen/Core>
+#include "src/utils/eigen_utils.hpp"
 
 using std::vector;
 using Eigen::MatrixXd;
