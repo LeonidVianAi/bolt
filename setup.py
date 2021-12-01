@@ -57,6 +57,7 @@ for path in paths:
 extra_args = ['-std=c++14',
               '-fno-rtti',
               '-march=native',
+              '-Wall',
               '-ffast-math']
 #if sys.platform == 'darwin':
 #    extra_args.append('-mmacosx-version-min=10.9')
