@@ -58,15 +58,15 @@ extra_args = ['-std=c++14',
               '-fno-rtti',
               '-march=native',
               '-ffast-math']
-if sys.platform == 'darwin':
-    extra_args.append('-mmacosx-version-min=10.9')
-    os.environ['LDFLAGS'] = '-mmacosx-version-min=10.9 -stdlib=libc++ -framework Accelerate'
-    os.environ["CC"] = "g++"  # force compiling c as c++
-else:  # based on Issue #4
-    extra_args += ['-stdlib=libc++']
-    os.environ['CC'] = "clang"
-    os.environ['CXX'] = "clang++"
-    os.environ['LDFLAGS'] = '-lc++'
+#if sys.platform == 'darwin':
+#    extra_args.append('-mmacosx-version-min=10.9')
+#    os.environ['LDFLAGS'] = '-mmacosx-version-min=10.9 -stdlib=libc++ -framework Accelerate'
+#    os.environ["CC"] = "g++"  # force compiling c as c++
+#else:  # based on Issue #4
+#    extra_args += ['-stdlib=libc++']
+#    os.environ['CC'] = "clang"
+#    os.environ['CXX'] = "clang++"
+#    os.environ['LDFLAGS'] = '-lc++'
 # else:
     # os.environ["CC"] = "clang++"  # force compiling c as c++
 
