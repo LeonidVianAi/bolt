@@ -15,7 +15,6 @@ pip
 pkgconfig
 plotly
 psutil
-pybolt
 pyparsing
 python-dateutil
 pytz
@@ -31,6 +30,5 @@ tomli
 torch
 torchvision
 typing_extensions
-viandvq
 wheel
 xgboost
